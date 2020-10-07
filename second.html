@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <center>
+        <h2 id="clicktopick">Click the Button to Pick A Player</h2>
+    </center>
+    <div class="pickPlayer">
+        <div class="row">
+            <div class="column" id="column-twerky">   
+                <iframe src="https://giphy.com/embed/26xBRiIYbyjCzYMAU" width="250" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> 
+            </div>
+            <div class="column"  id="column-stuey">
+                <iframe src="https://giphy.com/embed/26FLdmIp6wJr91JAI" width="250" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">   
+                <button class="character" id="twerky">Twerky</button>
+            </div>
+            <div class="column">   
+                <button class="character" id="stuey">Stuey</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column" id="column-looney">                
+                <iframe id="gee" src="https://giphy.com/embed/1sSfhxzWHJ4vC" width="250" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+            <div class="column" id="column-ducky">
+                <iframe src="https://giphy.com/embed/PFo2HrqCjC0bm" width="250" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">   
+                <button class="character" id="looney">Looney</button>
+            </div>
+            <div class="column">   
+                <button class="character" id="ducky">Ducky</button>
+            </div>
+        </div>
+        <button id="startbtn" onclick="secondRedirect()">START</button>
+    </div>
+    <script>
+        function secondRedirect (){
+            document.location.href="third.html";
+        }
+
+        let characters = document.querySelectorAll(".character");
+            for (let i = 0; i < characters.length; i++) {
+            characters[i].addEventListener("click", function() {
+            let selectedCharacter = document.querySelector(".selected");
+            if (selectedCharacter) {
+            selectedCharacter.classList.remove("selected");
+            }
+            this.classList.add("selected");
+            }, false);
+        }
+    </script>
+   
+</body>
+</html>
